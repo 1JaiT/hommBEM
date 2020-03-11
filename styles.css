@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+}
+/* top header navigation and button*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-color: rgb(198, 195, 236);
+    color: #FFF;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+
+.header__logo {
+    padding-left: 10px;
+}
+
+.header__account {
+    padding-right: 10px;
+}
+/*button animation*/
+
+.button {
+    border-radius: 1px;
+    background-color: #f01e6f;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover span {
+    padding-right: 25px;
+  }
+  
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+/*main section with image*/
+.content {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0 100px 0;
+}
+
+.content__one, .content__two, .content__three, .content_four {
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    width: 100%;
+}
+
+.content__one {
+    background-color: rgb(253, 253, 253);}
+
+.content__two {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    justify-items: center;}
+.content__three {
+    background-color: rgb(255, 255, 255);
+}
+
+.infocenter {
+    text-align: center;
+    flex-direction: row;
+}
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+/*grid section with team members*/
+html, body, .grid-container { height: 100%; margin: 0; 
+    scroll-behavior: smooth;
+}
+
+.grid-container * { 
+ border: 1px solid rgb(60, 36, 117);
+ position: relative;
+}
+
+.grid-container *:after { 
+ content:attr(class);
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.grid-container {
+  display: grid; flex-wrap: wrap;
+  margin: 5%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "header header header header" "team board mentors advisors" "students students students students";
+}
+
+.header { grid-area: header; }
+
+.students { grid-area: students; }
+
+.team { grid-area: team; }
+
+.board { grid-area: board; }
+
+.mentors { grid-area: mentors; }
+
+.advisors { grid-area: advisors; }
+
+
+.grid-container {
+    display: grid; flex-wrap: wrap;
+    margin: 5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "header header header header" "team board mentors advisors" "students students students students";
+  }
+  
+  .header { grid-area: header; }
+  
+  .info { grid-area: auto;
+    display: grid;flex-wrap: wrap; 
+    margin: 5%;
+    }
+
+
+.footer {
+    display: flex;
+    height: 50px;
+    background-color: rgb(60, 59, 82);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
