@@ -1,0 +1,33 @@
+html, body, .grid-container { height: 100%; margin: 0; }
+
+.grid-container * { 
+ border: 1px solid rgb(60, 36, 117);
+ position: relative;
+}
+
+.grid-container *:after { 
+ content:attr(class);
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "header header header header" "team board mentors advisors" "students students students students";
+}
+
+.header { grid-area: header; }
+
+.students { grid-area: students; }
+
+.team { grid-area: team; }
+
+.board { grid-area: board; }
+
+.mentors { grid-area: mentors; }
+
+.advisors { grid-area: advisors; }
+
